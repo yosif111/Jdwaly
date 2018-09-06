@@ -10,12 +10,6 @@ import com.jdwaly.demo.Models.Major;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-//import org.jsoup.Jsoup;
-//import org.jsoup.helper.Validate;
-//import org.jsoup.nodes.Document;
-//import org.jsoup.nodes.Element;
-//import org.jsoup.select.Elements;
-
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -39,7 +33,7 @@ public class ParseController {
             e.printStackTrace();
         }
 
-        client.waitForBackgroundJavaScript(30 * 1000); //* will wait JavaScript to execute up to 30s since the html is dynamic of the web page  */
+        client.waitForBackgroundJavaScript(30 * 1000); //* will wait JavaScript to execute up to 30s since the web page html is dynamic   */
 
         DomNodeList<HtmlElement> data =  page.getElementById("dtree0").getElementsByTagName("div");
 

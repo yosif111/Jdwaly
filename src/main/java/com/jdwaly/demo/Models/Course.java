@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Course {
 
-    private String name;
-    private String code;
+    protected String name;
+    protected String code;
     private ArrayList<Section> sections;
 
     public Course(String name, String code) {

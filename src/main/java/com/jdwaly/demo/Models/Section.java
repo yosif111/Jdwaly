@@ -21,7 +21,6 @@ public class Section extends Course {
         this.endTime = endTime;
         this.instructorsName = instructorName;
         this.days = days;
-
         practical = new ArrayList<>();
         tutorial = new ArrayList<>();
     }
@@ -30,9 +29,18 @@ public class Section extends Course {
         return endTime;
     }
 
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
     public String getStartTime() {
         return startTime;
     }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
 
     public String getSectionNumber() {
         return sectionNumber;
@@ -54,6 +62,10 @@ public class Section extends Course {
         this.practical.add(practical);
     }
 
+    public void setPractical(ArrayList<Section> practical) {
+        this.practical = practical;
+    }
+
     public String getType() {
         return type;
     }
@@ -62,30 +74,47 @@ public class Section extends Course {
         return tutorial;
     }
 
+    public void setTutorial(ArrayList<Section> tutorial) {
+        this.tutorial = tutorial;
+    }
+
+
     public void addTutorial(Section tutorial) {
         this.tutorial.add(tutorial);
     }
 
-    public void print(){
-        //super.print();
-        System.out.println("    Section Number: "+ this.getSectionNumber());
-        System.out.println("    Type: "+ this.getType());
+//    public void print(){
+//        //super.print();
+//        System.out.println();
+//        System.out.println("Section Number: "+ this.getSectionNumber());
+//        System.out.println("Type: "+ this.getType());
 //        System.out.println("Start Time: "+ this.getStartTime());
 //        System.out.println("End Time: "+ this.getEndTime());
+//        System.out.println("Days: ");
+//        for (int day : this.getDays())
+//            System.out.print(day + " ");
+//        System.out.println();
 //        System.out.println("Instructor Name "+ this.getInstructorsName());
 //        System.out.println("Days "+ this.getDays());
-
-        for (Section section : practical){
-           // section.print();
-            System.out.println("                    Section Number: "+ section.getSectionNumber());
-            System.out.println("                    Type: "+ section.getType());
-        }
-        for (Section section : tutorial){
-           // section.print();
-            System.out.println("                    Section Number: "+ section.getSectionNumber());
-            System.out.println("                    Type: "+ section.getType());
-        }
-    }
+//
+//        for (Section section : practical){
+//            //section.print();
+////            System.out.println("        Section Number: "+ section.getSectionNumber());
+//            System.out.println("        Type: "+ section.getType());
+//            System.out.println("        Start Time: "+ section.getStartTime());
+//            System.out.println("        End Time: "+ section.getEndTime());
+//            System.out.println("        Days: ");
+//            for (int day : this.getDays())
+//                System.out.print(day + " ");
+//            System.out.println();
+//        }
+//        for (Section section : tutorial){
+//            //section.print();
+//          //  System.out.println("        Section Number: "+ section.getSectionNumber());
+//            System.out.println("        Type: "+ section.getType());
+//            System.out.println("        Start Time: "+ section.getStartTime());
+//            System.out.println("        End Time: "+ section.getEndTime());
+//        }
+//    }
 
 }
-
